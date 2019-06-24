@@ -1,16 +1,21 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Tracker.MainUI;
+using Tracker.RestService.Data;
 
 namespace Tracker
 {
     public partial class App : Application
     {
+
+        public static UserData logedInUser;
+
         public App()
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new Login();
         }
 
         protected override void OnStart()

@@ -1,5 +1,30 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Tracker.MainUI.Maps">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             xmlns:local="clr-namespace:Maps"
+             x:Class="Tracker.MainUI.Maps"
+             
+             Title="Maps"
+             Icon="Place_black_24pt_1x.png"
+             BackgroundColor="#F3F3F3">
+    
+    
+    
     <ContentPage.Content>
+        <local:CustomMap x:Name="Maps" MapType="Street" WidthRequest="{x:Static local:App.ScreenWidth}" HeightRequest="{x:Static local:App.ScreenHeight}" />
     </ContentPage.Content>
+    <!--
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+           <maps:Map 
+                  x:Name="MyMap"
+                  IsShowingUser="true"
+                  MapType="Street" /> 
+        </StackLayout>
+    </ContentPage.Content>
+    -->
+    
+    
+    
 </ContentPage>

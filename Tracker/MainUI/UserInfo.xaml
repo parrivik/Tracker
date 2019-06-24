@@ -1,5 +1,42 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Tracker.MainUI.UserInfo">
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:UserInfo"
+             x:Class="Tracker.MainUI.UserInfo"
+             Title="Account"
+             Icon="baseline_person_black_24pt_1x.png"
+             BackgroundColor="#F3F3F3">
+    
     <ContentPage.Content>
+        <Grid Margin="20,70,20,20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.4*" />
+                <ColumnDefinition Width="0.6*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+            </Grid.RowDefinitions>
+            <Entry x:Name="idEntry"
+                       Grid.ColumnSpan="2"
+                       Text="1" />
+                <Button Grid.ColumnSpan="2"
+                        Grid.Row="1"
+                        Text="Get Person"
+                        Clicked="OnButtonClicked" />   
+            
+                <Label Grid.Row="2"
+                       Text="THIS SI ONLY A PLACEHOLDERTEXT" />
+                <Button Grid.ColumnSpan="2"
+                        Grid.Row="2"
+                        Text="Get Map Infos"
+                        Clicked="JeSuisCLickedOnMap" />   
+
+            
+
+   
+        </Grid>  
     </ContentPage.Content>
 </ContentPage>

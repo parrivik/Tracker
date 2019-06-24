@@ -1,5 +1,37 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Tracker.Login">
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="Tracker.Login"
+             Title="Login">
+    <!-- Einen oberen rand lassen für willkommenssachen, später?....  -->
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+                    iOS="20, 40, 20, 20"
+                    Android="20,20,20,20"
+                    />    
+    </ContentPage.Padding>
     <ContentPage.Content>
+        <StackLayout VerticalOptions="FillAndExpand"
+                     HorizontalOptions="FillAndExpand"
+                     Orientation="Vertical">
+                <Label Text="Login:" Margin="0, 50, 0, 0" />
+                <Label Text="Email" />
+                <Entry x:Name="email" Text="parrivik@students.zhaw.ch" />
+                <Label Text="Password"  />
+                <Entry x:Name="password" Text="12345" IsPassword="true"/>
+                <Button x:Name="loginButton" Text="Login" Clicked="OnLogin" BorderRadius="10"/>
+            
+            
+
+            
+            
+                <Label Text="Register:" Margin="0, 50, 0, 0" />
+                <Label Text="Email" />
+                <Entry x:Name="registeremail" Text="type your emai here" />
+                <Label Text="Password"  />
+                <Entry x:Name="registerpassword" Text="" IsPassword="true"/>
+                <Button x:Name="registerButton" Text="Register" Clicked="OnRegister" BorderRadius="10"/>
+            
+            </StackLayout>    
     </ContentPage.Content>
 </ContentPage>

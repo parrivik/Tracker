@@ -13,5 +13,17 @@
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="3.6.0.264807" />
     <PackageReference Include="Xamarin.Essentials" Version="1.0.1" />
+    <PackageReference Include="Xamarin.Forms.Maps" Version="3.6.0.220655" />
+    <PackageReference Include="Xam.Plugin.Geolocator" Version="4.5.0.6" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="MainUI\" />
+    <Folder Include="RestService\" />
+    <Folder Include="RestService\Controllers\" />
+    <Folder Include="RestService\Interfaces\" />
+    <Folder Include="RestService\Models\" />
+    <Folder Include="RestService\Properties\" />
+    <Folder Include="RestService\Data\" />
   </ItemGroup>
 </Project>
